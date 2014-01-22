@@ -1,4 +1,8 @@
 <?php
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); //Дата в прошлом
+header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+header("Pragma: no-cache"); // HTTP/1.1
+header("Last-Modified: ".gmdate("D, d M Y H:i:s")."GMT");
 
 define('MODX_API_MODE', true);
 require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/config/config.inc.php';
